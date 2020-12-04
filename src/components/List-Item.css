@@ -1,0 +1,8 @@
+.list-item {
+  display: flex;
+}
+
+.checked {
+  color: #a0aec0;
+  text-decoration: line-through;
+}

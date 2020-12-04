@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Button, Input } from "@chakra-ui/react";
+import "./Form.css";
 
 export default function Form(props: any) {
   const [task, setTask] = useState("");
@@ -14,14 +16,16 @@ export default function Form(props: any) {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
+    <form onSubmit={handleSubmit} className="form">
+      <Input
         type="text"
         placeholder="task"
         value={task}
         onChange={handleChange}
       />
-      <button type="submit">Add</button>
+      <Button colorScheme="teal" type="submit">
+        Add
+      </Button>
     </form>
   );
 }
